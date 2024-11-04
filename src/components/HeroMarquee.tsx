@@ -73,7 +73,7 @@ export default function HeroMarquee() {
       initial={{ opacity: 0, y: 10 }}
       transition={{ duration: 0.5, ease: "easeInOut", delay: 0.9 }}
       animate={{ opacity: 1, y: 0 }}
-      className="relative flex h-[320px] w-full max-w-5xl flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl"
+      className="relative flex min-h-[320px] w-full max-w-5xl flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl"
     >
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (
