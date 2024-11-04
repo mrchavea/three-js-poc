@@ -4,6 +4,8 @@ import SplineModel from "@/components/SplineModel";
 import Image from "next/image";
 import { MotionH1 } from "@/components/MotionH1";
 import { MotionDiv } from "@/components/MotionDiv";
+import TypingAnimation from "@/components/TypingAnimation";
+import HeroMarquee from "@/components/HeroMarquee";
 
 export default function Home() {
   // const camera = new THREE.PerspectiveCamera(10, 400/400, 0.1, 1000);
@@ -16,13 +18,13 @@ export default function Home() {
     <>
       <main>
         <section className="p-4 h-dvh flex flex-col gap-6 justify-center items-center ">
-          <MotionDiv initial={{ opacity: 0, y: -5 }} transition={{ duration: 1, delay: 0.1, ease: "easeInOut" }} animate={{ opacity: 1, y: 0 }} className="relative">
+          <MotionDiv initial={{ opacity: 0, y: -10 }} transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }} animate={{ opacity: 1, y: 0 }} className="relative">
             <h1 className="text-6xl max-w-[18ch] z-10 text-center">
-              The fastest <span className="text-6xl">chat now with </span> <span className="text-6xl font-bold text-purple-700">AI</span>
+              The fastest <span className="text-6xl">chat, now with </span> <span className="text-6xl font-bold text-purple-700">AI</span>
             </h1>
             <MotionDiv
               initial={{ opacity: 0 }}
-              transition={{ duration: 0.5, delay: 0.6, ease: "easeIn" }}
+              transition={{ duration: 0.3, delay: 0.6, ease: "easeIn" }}
               animate={{ opacity: 1 }}
               id="scene-container"
               className="z-0 pointer-events-none absolute -right-2 -bottom-14 sm:right-16 sm:-bottom-24 aspect-square h-[120px] sm:h-[180px] -rotate-90"
@@ -32,7 +34,7 @@ export default function Home() {
           </MotionDiv>
           <MotionDiv
             initial={{ opacity: 0 }}
-            transition={{ duration: 1.2, ease: "easeInOut", delay: 1.2 }}
+            transition={{ duration: 0.5, ease: "easeInOut", delay: 0.7 }}
             animate={{ opacity: 1 }}
             className="group max-w-[600px] backdrop-blur-[2px] w-full p-4 z-10 min-h-fit relative group duration-150 ease-in-out transition-all transform border-t hover:scale-105 hover:border-opacity-70 hover:bg-gray-900 hover:bg-clip-padding backdrop-filter hover:backdrop-blur-sm hover:bg-opacity-10 sm:h-[250px] flex flex-col gap-10 justify-center items-center rounded-3xl overflow-hidden hover:border border-slate-400 border-opacity-50"
           >
@@ -66,6 +68,7 @@ export default function Home() {
           {/* <div id="scene-container" className="z-0 pointer-events-none absolute -right-10 -bottom-5 w-[180px] h-[180px]">
               <Scene />
             </div> */}
+          <HeroMarquee />
         </section>
       </main>
 
