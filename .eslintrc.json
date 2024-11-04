@@ -1,3 +1,9 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "semi": "off", // Desactiva la verificación de punto y coma
+    "@typescript-eslint/semi": ["off"], // Desactiva también la validación de TypeScript
+    "id-match": "off", // Desactiva restricciones de formato de identificadores
+    "no-restricted-syntax": "off" // Desactiva restricciones de sintaxis específica
+  }
 }
